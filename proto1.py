@@ -1,12 +1,25 @@
 import math
 from xml.etree import ElementTree as ET
-from decimal import *
-from time import sleep
+from decimal import getcontext
+from functions import checkFileSize
 # import RPi.GPIO as GPIO
 
 getcontext().prec = 6
-tree = ET.parse('spline9p_newz.xml')
-root = tree.getroot()
+
+MAX_FILE_SIZE_BYTES = 500 * 1024 * 1024  # 500 MiB
+xml_filepath = '2026geo/Rectangle5cm_XY-Plane_allplan_4Points.xml'
+
+try:
+    filesize = checkFileSize(xml_filepath, MAX_FILE_SIZE_BYTES)
+    print(f"Filesize: {filesize} bytes\nLimit: {MAX_FILE_SIZE_BYTES}")
+except ValueError as e:
+    print(f"Aborting: {e}")
+
+with open(xml_filepath, 'rb') as f:
+    raw_bytes = f.read()
+    cleaned_bytes = raw_bytes.replace(b'noi:', b'')
+root = ET.fromstring(cleaned_bytes)       
+
 
 print("this is bullshit and the x y and z values")
 
@@ -109,36 +122,50 @@ while b + 2 < len(x_val):
     x1_y = (y_val[b + 1]) - (y_val[b])
     x2_x = (x_val[b + 1]) - (x_val[b + 2])
     x2_y = (y_val[b + 1]) - (y_val[b + 2])
-    phi_rad_xy = math.acos(
-        ((x1_x * x2_x + x1_y * x2_y) / (math.sqrt(x1_x ** 2 + x1_y ** 2) * math.sqrt(x2_x ** 2 + x2_y ** 2))))
+
+    dot = x1_x * x2_x + x1_y * x2_y
+    denom = math.sqrt(x1_x ** 2 + x1_y ** 2) * math.sqrt(x2_x ** 2 + x2_y ** 2)
+    #check for 0 which means the angle is 0/360 degrees and no bend is happening
+    if denom <= 1e-10:
+        phi_rad_xy = 0
+    else:
+        cos_phi = max (-1.0, min(1.0, dot / denom))
+        phi_rad_xy = math.acos(cos_phi)
+
     phi_xy = phi_rad_xy * 180 / math.pi
     bend_ang_xy = 180 - phi_xy
     bend_ang_rad_xy = bend_ang_xy * math.pi / 180
-    if bend_ang_xy < round(180, 8):
-        xy_degree.append(bend_ang_xy)
-    else:
+    if abs(bend_ang_xy - 180) < 1e-10:
         xy_degree.append(0)
-    xy_phi.append(phi_xy)  #########CHANGE BETA TO BEND ANG ! ! ! ! !#####################################################
-    orthv_x = x1_y * (-1) / 10000
-    orthv_y = x1_x / 10000
-    checkp_x = x_val[b] + orthv_x
-    checkp_y = y_val[b] + orthv_y
-    # Vektor Punkt von Gerade zu Punkt
-    c1_x = x_val[b + 2] - x_val[b]
-    c1_y = y_val[b + 2] - y_val[b]
-    normal_distxy_part = abs(c1_x * orthv_x + c1_y * orthv_y)
-    normal_distxy = (normal_distxy_part / math.sqrt((orthv_x ** 2 + orthv_y ** 2)))
-    c2_x = x_val[b + 2] - checkp_x
-    c2_y = y_val[b + 2] - checkp_y
-    normal_distxy2_part = abs(c2_x * orthv_x + c2_y * orthv_y)
-    normal_distxy2_checkp = (normal_distxy2_part / math.sqrt((orthv_x ** 2 + orthv_y ** 2)))
-
-    if round(normal_distxy, 8) < round(normal_distxy2_checkp, 8):
-        orientation_xy.append("CCW")
+        orientation_xy.append("NONE")    
+        
     else:
-        orientation_xy.append("CW")
+        xy_degree.append(bend_ang_xy)
+        orthv_x = x1_y * (-1) / 10000
+        orthv_y = x1_x / 10000
+        checkp_x = x_val[b] + orthv_x
+        checkp_y = y_val[b] + orthv_y
+        # Vektor Punkt von Gerade zu Punkt
+        c1_x = x_val[b + 2] - x_val[b]
+        c1_y = y_val[b + 2] - y_val[b]
+        normal_distxy_part = abs(c1_x * orthv_x + c1_y * orthv_y)
+        normal_distxy = (normal_distxy_part / math.sqrt((orthv_x ** 2 + orthv_y ** 2)))
+        c2_x = x_val[b + 2] - checkp_x
+        c2_y = y_val[b + 2] - checkp_y
+        normal_distxy2_part = abs(c2_x * orthv_x + c2_y * orthv_y)
+        normal_distxy2_checkp = (normal_distxy2_part / math.sqrt((orthv_x ** 2 + orthv_y ** 2)))
+        
+        if round(normal_distxy, 8) < round(normal_distxy2_checkp, 8):
+            orientation_xy.append("CCW")
+        else:
+            orientation_xy.append("CW")
 
-    print("B is", b, "phi is", round(phi_xy, 5), "Orientation is", orientation_xy[b], "Bending Angle is", xy_degree[b])
+    
+    xy_phi.append(phi_xy)  #########CHANGE BETA TO BEND ANG ! ! ! ! !#####################################################
+
+
+
+    print("Bend ", b, ": Beta (XY Angle) is:", round(bend_ang_xy, 2), " // phi is", round(phi_xy, 5), " // Orientation is", orientation_xy[b], "Bending Angle is", xy_degree[b])
     b += 1
 
 
@@ -157,129 +184,49 @@ while c + 2 < len(x_val):
     x1_z = (z_val[c + 1]) - (z_val[c])
     x2_x = (x_val[c + 1]) - (x_val[c + 2])
     x2_z = (z_val[c + 1]) - (z_val[c + 2])
-    phi_rad_xz = math.acos(
-        ((x1_x * x2_x + x1_z * x2_z) / (math.sqrt(x1_x ** 2 + x1_z ** 2) * math.sqrt(x2_x ** 2 + x2_z ** 2))))
+    dot = x1_x * x2_x + x1_z * x2_z
+    denom = math.sqrt(x1_x ** 2 + x1_z ** 2) * math.sqrt(x2_x ** 2 + x2_z ** 2)
+    #check for 0 which means the angle is 0/360 degrees and no bend is happening
+    if denom <= 1e-10:
+        phi_rad_xz = 0
+    else:
+        cos_phi = max (-1.0, min(1.0, dot / denom))
+        phi_rad_xz = math.acos(cos_phi)
+
     phi_xz = phi_rad_xz * 180 / math.pi
     bend_ang_xz = 180 - phi_xz
     bend_ang_rad_xz = bend_ang_xz * math.pi / 180
-    if bend_ang_xz < round(180, 8):
-        xz_degree.append(bend_ang_xz)
-    else:
+    if abs(bend_ang_xz - 180) < 1e-9:
         xz_degree.append(0)
+        orientation_xz.append("NONE")
+        
+    else:
+        xz_degree.append(bend_ang_xz)
+        ##Orientation Evluation
+        orthv2_x = x1_z * (-1) / 10000
+        orthv_z = x1_x / 10000
+        checkp_x = x_val[c] + orthv2_x
+        checkp_z = z_val[c] + orthv_z
+        # Vektor Punkt von Gerade zu Punkt
+        c1_x = x_val[c + 2] - x_val[c]
+        c1_z = z_val[c + 2] - z_val[c]
+        normal_distxz_part = abs(c1_x * orthv2_x + c1_z * orthv_z)
+        normal_distxz = (normal_distxz_part / math.sqrt((orthv2_x ** 2 + orthv_z ** 2)))
+        c2_x = x_val[c + 2] - checkp_x
+        c2_z = z_val[c + 2] - checkp_z
+        normal_distxz2_part = abs(c2_x * orthv2_x + c2_z * orthv_z)
+        normal_distxz2_checkp = (normal_distxz2_part / math.sqrt((orthv2_x ** 2 + orthv_z ** 2)))
+        if round(normal_distxz, 8) < round(normal_distxz2_checkp, 8):
+                orientation_xz.append("CCW")
+        else:
+                orientation_xz.append("CW")
+
     xz_phi.append(
         phi_xz)  #########CHANGE BETA TO BEND ANG ! ! ! ! !#####################################################
-    orthv2_x = x1_z * (-1) / 10000
-    orthv_z = x1_x / 10000
-    checkp_x = x_val[c] + orthv2_x
-    checkp_z = z_val[c] + orthv_z
-    # Vektor Punkt von Gerade zu Punkt
-    c1_x = x_val[c + 2] - x_val[c]
-    c1_z = z_val[c + 2] - z_val[c]
-    normal_distxz_part = abs(c1_x * orthv2_x + c1_z * orthv_z)
-    normal_distxz = (normal_distxz_part / math.sqrt((orthv2_x ** 2 + orthv_z ** 2)))
-    c2_x = x_val[c + 2] - checkp_x
-    c2_z = z_val[c + 2] - checkp_z
-    normal_distxz2_part = abs(c2_x * orthv2_x + c2_z * orthv_z)
-    normal_distxz2_checkp = (normal_distxz2_part / math.sqrt((orthv2_x ** 2 + orthv_z ** 2)))
 
-    if round(normal_distxz, 8) < round(normal_distxz2_checkp, 8):
-            orientation_xz.append("CCW")
-    else:
-            orientation_xz.append("CW")
-
-    print("C is", c, "phi is", round(phi_xz, 5), "Orientation is", orientation_xz[c], "Bending Angle is", xz_degree[c])
+    print("Bend ", c, "Gamma (XZ angle) is phi is", round(phi_xz, 5), "Orientation is", orientation_xz[c], "Bending Angle is", xz_degree[c])
 
 
     c += 1
 
 
-#   XY Bending Motor
-DIR_xy = 20   # Direction GPIO Pin
-STEP_xy = 21  # Step GPIO Pin
-CW = 1     # Clockwise Rotation
-CCW = 0    # Counterclockwise Rotation
-SPR_xy = 200   # Steps per Revolution (360/1.8)
-
-# # GPIO.setmode(GPIO.BCM)
-# GPIO.setup(DIR_xy, GPIO.OUT)
-# GPIO.setup(STEP_xy, GPIO.OUT)
-# GPIO.output(DIR_xy, CW)
-#
-# MODE_xy = (14, 15, 18)
-# Gpio.setup(MODE_xy, GPIO.OUT)
-# RESOLUTION = {'Full': (0, 0, 0),
-#               'Half': (1, 0, 0),
-#               '1/4': (0, 1, 0),
-#               '1/8': (1, 1, 0),
-#               '1/16': (0, 0, 1),
-#               '1/32': (1, 0, 1)}
-# GPIO.output(MODE_xy, RESOLUTION['1/32'])
-
-
-
-#   XZ Bending Motor
-DIR_xz = 20   # Direction GPIO Pin
-STEP_xz = 21  # Step GPIO Pin
-
-SPR_xz = 200   # Steps per Revolution (360/1.8)
-
-# # GPIO.setmode(GPIO.BCM)
-# GPIO.setup(DIR_xz, GPIO.OUT)
-# GPIO.setup(STEP_xz, GPIO.OUT)
-# GPIO.output(DIR_xz, CW)
-#
-# MODE_xz = (14, 15, 18)
-# Gpio.setup(MODE_xz, GPIO.OUT)
-# RESOLUTION = {'Full': (0, 0, 0),
-#               'Half': (1, 0, 0),
-#               '1/4': (0, 1, 0),
-#               '1/8': (1, 1, 0),
-#               '1/16': (0, 0, 1),
-#               '1/32': (1, 0, 1)}
-# GPIO.output(MODE_xz, RESOLUTION['1/32'])
-
-
-d = 0
-while d < len(feed_length):
-    #  append feed_length and steps
-
-
-    if orientation_xz[d] == "CW":
-            step_count_xz = int(float(xz_degree[d])*(1 / 0.01125))  #  Bei 1:20 und 1/8 microstepping!
-    else:
-            step_count_xz = int(float(xz_degree[d])*(1 / 0.01125)*-1)
-
-    delayfor05RPSxz = 2 / (SPR_xz * 8)
-    print("xz Steps", [d], step_count_xz)
-        # for x in range(step_count_xz):
-        #     GPIO.output(STEP_xz, GPIO.HIGH)
-        #     sleep(delayfor2RPS)
-        #     GPIO.output(STEP_xz, GPIO.LOW)
-        #     sleep(delay)
-
-    sleep(0.5)
-
-
-
-
-    if orientation_xy[d] == "CW":
-        step_count_xy = int(float(xy_degree[d])*(1/0.03214))    #  Bei 1:1,75!
-    else:
-        step_count_xy = int(float(xy_degree[d])*(1/0.03214))*-1
-
-    delayfor05RPSxy = 2 / (SPR_xy * 32)     # 0,00015625*2
-    print("xy steps", [d], step_count_xy)
-    # for x in range(step_count_xy):
-    #     GPIO.output(STEP_xy, GPIO.HIGH)
-    #     sleep(delayfor05RPSxy)
-    #     GPIO.output(STEP_xy, GPIO.LOW)
-    #     sleep(delayfor05RPSxy)
-
-    sleep(.5)
-    d += 1
-
-    # GPIO.output(DIR_xy, CCW)
-
-
-
-#GPIO.cleanup()
