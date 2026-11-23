@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<DOCUMENT xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:noi="NOISchema.xsd">
+<VERSION info_1="2004" info_2="2004.0" info_3="" />
+<MODEL_SECTION>
+<BASIS_LINE3D>
+<UUID drawingId="00000000-0000-0000-0000-000000000000" elementId="0" />
+<NAMED_UUID name="Spline" /><GEOMETRY>
+<GEO_POLYHEDRON3D orientation="e_POSITIVE" dimension="e_HAS_EDGES">
+<GEO_POINT_LIST_3D>
+<GEO_POINT x="0.085" y="0" z="0.642" />
+<GEO_POINT x="54.589" y="39.708" z="-7.216" />
+<GEO_POINT x="97.816" y="-15.683" z="49.753" />
+<GEO_POINT x="139.35" y="-28.988" z="110.65" />
+<GEO_POINT x="57.738" y="115.293" z="139.462" />
+<GEO_POINT x="161.75" y="38.707" z="12.625" />
+<GEO_POINT x="134.091" y="0" z="35.663" />
+<GEO_POINT x="152.121" y="0" z="8.426" />
+<GEO_POINT x="122.198" y="0" z="22.62" />
+</GEO_POINT_LIST_3D>
+<GEO_EDGE_LIST>
+<GEO_EDGE e1="1" e2="2" />
+<GEO_EDGE e1="2" e2="3" />
+<GEO_EDGE e1="3" e2="4" />
+<GEO_EDGE e1="4" e2="5" />
+<GEO_EDGE e1="5" e2="6" />
+<GEO_EDGE e1="6" e2="7" />
+<GEO_EDGE e1="7" e2="8" />
+<GEO_EDGE e1="8" e2="9" />
+</GEO_EDGE_LIST>
+</GEO_POLYHEDRON3D>
+</GEOMETRY>
+<COMMON_STYLE alpha="0" r="125" g="125" b="125" layerId="0" strokeId="1" penId="2" colorByLayer="false" strokeByLayer="false" penByLayer="false" byLayerAllowed="false" useConstructionLineMode="false" drawOrder="15" />
+</BASIS_LINE3D>
+</MODEL_SECTION>
+</DOCUMENT>

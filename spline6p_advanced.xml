@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<DOCUMENT xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:noi="NOISchema.xsd">
+<VERSION info_1="2004" info_2="2004.0" info_3="" />
+<MODEL_SECTION>
+<BASIS_LINE3D>
+<UUID drawingId="00000000-0000-0000-0000-000000000000" elementId="0" />
+<NAMED_UUID name="Spline" /><GEOMETRY>
+<GEO_POLYHEDRON3D orientation="e_POSITIVE" dimension="e_HAS_EDGES">
+<GEO_POINT_LIST_3D>
+<GEO_POINT x="0.085" y="0" z="0.642" />
+<GEO_POINT x="54.589" y="0" z="-7.216" />
+<GEO_POINT x="97.816" y="0" z="49.753" />
+<GEO_POINT x="138.786" y="-2.846" z="110.65" />
+<GEO_POINT x="57.738" y="115.293" z="139.462" />
+<GEO_POINT x="161.75" y="0" z="12.625" />
+<GEO_POINT x="134.091" y="0" z="35.663" />
+<GEO_POINT x="154.806" y="0" z="8.809" />
+<GEO_POINT x="145.974" y="0" z="13.212" />
+<GEO_POINT x="137.472" y="0" z="16.622" />
+<GEO_POINT x="131.438" y="0" z="18.395" />
+<GEO_POINT x="127.547" y="0" z="19.111" />
+<GEO_POINT x="124.804" y="0" z="19.318" />
+<GEO_POINT x="123.093" y="0" z="19.269" />
+<GEO_POINT x="121.498" y="0" z="19.053" />
+<GEO_POINT x="120.038" y="0" z="18.654" />
+<GEO_POINT x="118.73" y="0" z="18.058" />
+<GEO_POINT x="118.14" y="0" z="17.681" />
+<GEO_POINT x="117.595" y="0" z="17.249" />
+<GEO_POINT x="117.132" y="0" z="16.802" />
+<GEO_POINT x="116.782" y="0" z="16.383" />
+<GEO_POINT x="116.541" y="0" z="15.988" />
+<GEO_POINT x="116.405" y="0" z="15.618" />
+<GEO_POINT x="116.367" y="0" z="15.271" />
+<GEO_POINT x="116.425" y="0" z="14.946" />
+<GEO_POINT x="116.571" y="0" z="14.641" />
+<GEO_POINT x="116.803" y="0" z="14.356" />
+<GEO_POINT x="117.115" y="0" z="14.089" />
+<GEO_POINT x="117.503" y="0" z="13.839" />
+<GEO_POINT x="118.485" y="0" z="13.386" />
+<GEO_POINT x="119.711" y="0" z="12.985" />
+<GEO_POINT x="122.741" y="0" z="12.306" />
+<GEO_POINT x="136.965" y="0" z="9.778" />
+<GEO_POINT x="138.961" y="0" z="9.073" />
+<GEO_POINT x="140.006" y="0" z="8.519" />
+<GEO_POINT x="140.428" y="0" z="8.214" />
+<GEO_POINT x="140.777" y="0" z="7.888" />
+<GEO_POINT x="141.049" y="0" z="7.54" />
+<GEO_POINT x="141.238" y="0" z="7.169" />
+<GEO_POINT x="141.339" y="0" z="6.774" />
+<GEO_POINT x="141.349" y="0" z="6.353" />
+<GEO_POINT x="141.261" y="0" z="5.905" />
+<GEO_POINT x="141.072" y="0" z="5.429" />
+<GEO_POINT x="140.776" y="0" z="4.924" />
+<GEO_POINT x="140.368" y="0" z="4.389" />
+<GEO_POINT x="139.845" y="0" z="3.822" />
+<GEO_POINT x="137.306" y="0" z="1.534" />
+<GEO_POINT x="133.658" y="0" z="-1.183" />
+<GEO_POINT x="127.193" y="0" z="-5.125" />
+<GEO_POINT x="114.881" y="0" z="-11.035" />
+<GEO_POINT x="108.772" y="0" z="-13.441" />
+</GEO_POINT_LIST_3D>
+<GEO_EDGE_LIST>
+<GEO_EDGE e1="1" e2="2" />
+<GEO_EDGE e1="2" e2="3" />
+<GEO_EDGE e1="3" e2="4" />
+<GEO_EDGE e1="4" e2="5" />
+<GEO_EDGE e1="5" e2="6" />
+<GEO_EDGE e1="6" e2="7" />
+<GEO_EDGE e1="7" e2="8" />
+<GEO_EDGE e1="8" e2="9" />
+<GEO_EDGE e1="9" e2="10" />
+<GEO_EDGE e1="10" e2="11" />
+<GEO_EDGE e1="11" e2="12" />
+<GEO_EDGE e1="12" e2="13" />
+<GEO_EDGE e1="13" e2="14" />
+<GEO_EDGE e1="14" e2="15" />
+<GEO_EDGE e1="15" e2="16" />
+<GEO_EDGE e1="16" e2="17" />
+<GEO_EDGE e1="17" e2="18" />
+<GEO_EDGE e1="18" e2="19" />
+<GEO_EDGE e1="19" e2="20" />
+<GEO_EDGE e1="20" e2="21" />
+<GEO_EDGE e1="21" e2="22" />
+<GEO_EDGE e1="22" e2="23" />
+<GEO_EDGE e1="23" e2="24" />
+<GEO_EDGE e1="24" e2="25" />
+<GEO_EDGE e1="25" e2="26" />
+<GEO_EDGE e1="26" e2="27" />
+<GEO_EDGE e1="27" e2="28" />
+<GEO_EDGE e1="28" e2="29" />
+<GEO_EDGE e1="29" e2="30" />
+<GEO_EDGE e1="30" e2="31" />
+<GEO_EDGE e1="31" e2="32" />
+<GEO_EDGE e1="32" e2="33" />
+<GEO_EDGE e1="33" e2="34" />
+<GEO_EDGE e1="34" e2="35" />
+<GEO_EDGE e1="35" e2="36" />
+<GEO_EDGE e1="36" e2="37" />
+<GEO_EDGE e1="37" e2="38" />
+<GEO_EDGE e1="38" e2="39" />
+<GEO_EDGE e1="39" e2="40" />
+<GEO_EDGE e1="40" e2="41" />
+<GEO_EDGE e1="41" e2="42" />
+<GEO_EDGE e1="42" e2="43" />
+<GEO_EDGE e1="43" e2="44" />
+<GEO_EDGE e1="44" e2="45" />
+<GEO_EDGE e1="45" e2="46" />
+<GEO_EDGE e1="46" e2="47" />
+<GEO_EDGE e1="47" e2="48" />
+<GEO_EDGE e1="48" e2="49" />
+<GEO_EDGE e1="49" e2="50" />
+<GEO_EDGE e1="50" e2="51" />
+</GEO_EDGE_LIST>
+</GEO_POLYHEDRON3D>
+</GEOMETRY>
+<COMMON_STYLE alpha="0" r="125" g="125" b="125" layerId="0" strokeId="1" penId="2" colorByLayer="false" strokeByLayer="false" penByLayer="false" byLayerAllowed="false" useConstructionLineMode="false" drawOrder="15" />
+</BASIS_LINE3D>
+</MODEL_SECTION>
+</DOCUMENT>

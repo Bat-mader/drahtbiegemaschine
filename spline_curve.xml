@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<DOCUMENT xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:noi="NOISchema.xsd">
+<VERSION info_1="2005" info_2="2005.0" info_3="" />
+<MODEL_SECTION>
+<BASIS_LINE3D>
+<UUID drawingId="00000000-0000-0000-0000-000000000000" elementId="0" />
+<NAMED_UUID name="Spline" /><GEOMETRY>
+<GEO_POLYHEDRON3D orientation="e_POSITIVE" dimension="e_HAS_EDGES">
+<GEO_POINT_LIST_3D>
+<GEO_POINT x="-1.06" y="0.569" z="3.261" />
+<GEO_POINT x="-1.068" y="0.666" z="3.472" />
+<GEO_POINT x="-1.166" y="0.879" z="4.093" />
+<GEO_POINT x="-1.604" y="1.634" z="6.484" />
+<GEO_POINT x="-5.608" y="8.592" z="28.432" />
+<GEO_POINT x="-7.555" y="12.592" z="40.342" />
+<GEO_POINT x="-9.464" y="17.214" z="53.419" />
+<GEO_POINT x="-10.624" y="20.598" z="62.519" />
+<GEO_POINT x="-11.633" y="24.194" z="71.738" />
+<GEO_POINT x="-12.435" y="27.976" z="80.916" />
+<GEO_POINT x="-12.742" y="29.928" z="85.44" />
+<GEO_POINT x="-12.977" y="31.917" z="89.894" />
+<GEO_POINT x="-13.133" y="33.94" z="94.257" />
+<GEO_POINT x="-13.205" y="35.992" z="98.51" />
+<GEO_POINT x="-13.184" y="38.072" z="102.633" />
+<GEO_POINT x="-13.065" y="40.175" z="106.606" />
+<GEO_POINT x="-12.841" y="42.299" z="110.409" />
+<GEO_POINT x="-12.504" y="44.44" z="114.022" />
+<GEO_POINT x="-12.048" y="46.594" z="117.424" />
+<GEO_POINT x="-11.467" y="48.76" z="120.597" />
+<GEO_POINT x="-10.754" y="50.933" z="123.519" />
+<GEO_POINT x="-9.901" y="53.11" z="126.171" />
+<GEO_POINT x="-8.902" y="55.288" z="128.533" />
+<GEO_POINT x="-7.751" y="57.464" z="130.585" />
+<GEO_POINT x="-6.441" y="59.635" z="132.307" />
+<GEO_POINT x="-4.964" y="61.796" z="133.679" />
+<GEO_POINT x="-3.315" y="63.946" z="134.681" />
+<GEO_POINT x="-1.487" y="66.08" z="135.293" />
+<GEO_POINT x="0.528" y="68.196" z="135.494" />
+<GEO_POINT x="2.736" y="70.29" z="135.266" />
+<GEO_POINT x="5.144" y="72.359" z="134.588" />
+<GEO_POINT x="7.758" y="74.399" z="133.44" />
+<GEO_POINT x="10.586" y="76.409" z="131.801" />
+<GEO_POINT x="13.633" y="78.383" z="129.653" />
+<GEO_POINT x="16.907" y="80.319" z="126.975" />
+<GEO_POINT x="20.414" y="82.215" z="123.747" />
+<GEO_POINT x="23.969" y="84.015" z="120.234" />
+<GEO_POINT x="27.386" y="85.675" z="116.716" />
+<GEO_POINT x="30.67" y="87.201" z="113.195" />
+<GEO_POINT x="33.825" y="88.597" z="109.673" />
+<GEO_POINT x="36.858" y="89.872" z="106.153" />
+<GEO_POINT x="39.772" y="91.03" z="102.637" />
+<GEO_POINT x="42.573" y="92.078" z="99.128" />
+<GEO_POINT x="45.266" y="93.023" z="95.627" />
+<GEO_POINT x="47.857" y="93.871" z="92.136" />
+<GEO_POINT x="50.35" y="94.627" z="88.659" />
+<GEO_POINT x="52.75" y="95.298" z="85.197" />
+<GEO_POINT x="55.063" y="95.891" z="81.753" />
+<GEO_POINT x="57.293" y="96.411" z="78.328" />
+<GEO_POINT x="59.446" y="96.865" z="74.926" />
+<GEO_POINT x="63.54" y="97.598" z="68.196" />
+<GEO_POINT x="67.386" y="98.141" z="61.582" />
+<GEO_POINT x="71.025" y="98.543" z="55.101" />
+<GEO_POINT x="85.924" y="99.946" z="28.077" />
+<GEO_POINT x="89.15" y="100.464" z="22.655" />
+<GEO_POINT x="90.781" y="100.788" z="20.037" />
+<GEO_POINT x="92.433" y="101.164" z="17.484" />
+<GEO_POINT x="94.108" y="101.599" z="14.999" />
+<GEO_POINT x="95.814" y="102.098" z="12.583" />
+<GEO_POINT x="97.554" y="102.667" z="10.239" />
+<GEO_POINT x="99.333" y="103.313" z="7.969" />
+<GEO_POINT x="101.158" y="104.042" z="5.775" />
+<GEO_POINT x="103.033" y="104.861" z="3.661" />
+<GEO_POINT x="104.963" y="105.775" z="1.627" />
+<GEO_POINT x="106.952" y="106.791" z="-0.324" />
+<GEO_POINT x="109.008" y="107.914" z="-2.19" />
+<GEO_POINT x="111.133" y="109.152" z="-3.967" />
+<GEO_POINT x="113.334" y="110.51" z="-5.655" />
+<GEO_POINT x="115.615" y="111.995" z="-7.25" />
+<GEO_POINT x="117.982" y="113.612" z="-8.751" />
+<GEO_POINT x="120.44" y="115.368" z="-10.155" />
+<GEO_POINT x="122.994" y="117.27" z="-11.46" />
+<GEO_POINT x="125.648" y="119.323" z="-12.664" />
+<GEO_POINT x="128.408" y="121.534" z="-13.764" />
+<GEO_POINT x="182.174" y="165.182" z="-34.024" />
+<GEO_POINT x="195.641" y="176.403" z="-38.521" />
+<GEO_POINT x="204.609" y="184.001" z="-41.265" />
+<GEO_POINT x="213.453" y="191.618" z="-43.722" />
+<GEO_POINT x="222.074" y="199.191" z="-45.82" />
+<GEO_POINT x="226.27" y="202.942" z="-46.712" />
+<GEO_POINT x="230.373" y="206.658" z="-47.487" />
+<GEO_POINT x="234.371" y="210.331" z="-48.137" />
+<GEO_POINT x="238.252" y="213.955" z="-48.651" />
+<GEO_POINT x="242.002" y="217.52" z="-49.022" />
+<GEO_POINT x="245.61" y="221.019" z="-49.24" />
+<GEO_POINT x="249.063" y="224.443" z="-49.297" />
+<GEO_POINT x="252.349" y="227.786" z="-49.183" />
+<GEO_POINT x="255.455" y="231.039" z="-48.889" />
+<GEO_POINT x="258.37" y="234.195" z="-48.407" />
+<GEO_POINT x="261.08" y="237.245" z="-47.727" />
+<GEO_POINT x="263.574" y="240.181" z="-46.84" />
+<GEO_POINT x="265.838" y="242.996" z="-45.738" />
+<GEO_POINT x="267.861" y="245.682" z="-44.411" />
+<GEO_POINT x="269.63" y="248.23" z="-42.851" />
+<GEO_POINT x="271.134" y="250.634" z="-41.048" />
+<GEO_POINT x="272.358" y="252.885" z="-38.993" />
+<GEO_POINT x="273.292" y="254.975" z="-36.678" />
+<GEO_POINT x="273.922" y="256.896" z="-34.093" />
+<GEO_POINT x="274.237" y="258.64" z="-31.23" />
+<GEO_POINT x="274.223" y="260.2" z="-28.079" />
+<GEO_POINT x="273.869" y="261.568" z="-24.631" />
+<GEO_POINT x="273.162" y="262.735" z="-20.879" />
+<GEO_POINT x="272.09" y="263.694" z="-16.811" />
+<GEO_POINT x="270.641" y="264.438" z="-12.42" />
+<GEO_POINT x="268.801" y="264.957" z="-7.697" />
+<GEO_POINT x="266.559" y="265.244" z="-2.632" />
+<GEO_POINT x="264.209" y="265.474" z="2.534" />
+<GEO_POINT x="262.048" y="265.822" z="7.556" />
+<GEO_POINT x="260.072" y="266.282" z="12.435" />
+<GEO_POINT x="258.274" y="266.851" z="17.174" />
+<GEO_POINT x="256.648" y="267.522" z="21.774" />
+<GEO_POINT x="255.189" y="268.292" z="26.236" />
+<GEO_POINT x="253.89" y="269.154" z="30.563" />
+<GEO_POINT x="252.746" y="270.103" z="34.755" />
+<GEO_POINT x="251.751" y="271.136" z="38.815" />
+<GEO_POINT x="250.899" y="272.246" z="42.744" />
+<GEO_POINT x="250.184" y="273.428" z="46.543" />
+<GEO_POINT x="249.6" y="274.678" z="50.215" />
+<GEO_POINT x="249.142" y="275.991" z="53.761" />
+<GEO_POINT x="248.803" y="277.361" z="57.182" />
+<GEO_POINT x="248.578" y="278.783" z="60.481" />
+<GEO_POINT x="248.46" y="280.252" z="63.659" />
+<GEO_POINT x="248.444" y="281.763" z="66.717" />
+<GEO_POINT x="248.524" y="283.312" z="69.657" />
+<GEO_POINT x="248.694" y="284.892" z="72.481" />
+<GEO_POINT x="248.949" y="286.5" z="75.191" />
+<GEO_POINT x="249.281" y="288.129" z="77.788" />
+<GEO_POINT x="249.687" y="289.776" z="80.273" />
+<GEO_POINT x="250.158" y="291.434" z="82.648" />
+<GEO_POINT x="250.691" y="293.099" z="84.916" />
+<GEO_POINT x="251.278" y="294.765" z="87.077" />
+<GEO_POINT x="251.914" y="296.429" z="89.134" />
+<GEO_POINT x="252.594" y="298.083" z="91.087" />
+<GEO_POINT x="253.31" y="299.725" z="92.939" />
+<GEO_POINT x="254.058" y="301.347" z="94.69" />
+<GEO_POINT x="254.831" y="302.946" z="96.344" />
+<GEO_POINT x="255.624" y="304.517" z="97.901" />
+<GEO_POINT x="256.43" y="306.054" z="99.363" />
+<GEO_POINT x="257.245" y="307.551" z="100.732" />
+<GEO_POINT x="258.061" y="309.005" z="102.009" />
+<GEO_POINT x="258.873" y="310.411" z="103.196" />
+<GEO_POINT x="259.676" y="311.762" z="104.295" />
+<GEO_POINT x="260.463" y="313.054" z="105.306" />
+<GEO_POINT x="261.228" y="314.282" z="106.233" />
+<GEO_POINT x="261.966" y="315.441" z="107.076" />
+<GEO_POINT x="262.67" y="316.525" z="107.837" />
+<GEO_POINT x="263.335" y="317.53" z="108.518" />
+<GEO_POINT x="263.955" y="318.451" z="109.121" />
+<GEO_POINT x="264.525" y="319.283" z="109.646" />
+<GEO_POINT x="265.487" y="320.658" z="110.472" />
+<GEO_POINT x="266.174" y="321.614" z="111.01" />
+<GEO_POINT x="266.401" y="321.923" z="111.175" />
+<GEO_POINT x="266.589" y="322.176" z="111.305" />
+</GEO_POINT_LIST_3D>
+<GEO_EDGE_LIST>
+<GEO_EDGE e1="1" e2="2" />
+<GEO_EDGE e1="2" e2="3" />
+<GEO_EDGE e1="3" e2="4" />
+<GEO_EDGE e1="4" e2="5" />
+<GEO_EDGE e1="5" e2="6" />
+<GEO_EDGE e1="6" e2="7" />
+<GEO_EDGE e1="7" e2="8" />
+<GEO_EDGE e1="8" e2="9" />
+<GEO_EDGE e1="9" e2="10" />
+<GEO_EDGE e1="10" e2="11" />
+<GEO_EDGE e1="11" e2="12" />
+<GEO_EDGE e1="12" e2="13" />
+<GEO_EDGE e1="13" e2="14" />
+<GEO_EDGE e1="14" e2="15" />
+<GEO_EDGE e1="15" e2="16" />
+<GEO_EDGE e1="16" e2="17" />
+<GEO_EDGE e1="17" e2="18" />
+<GEO_EDGE e1="18" e2="19" />
+<GEO_EDGE e1="19" e2="20" />
+<GEO_EDGE e1="20" e2="21" />
+<GEO_EDGE e1="21" e2="22" />
+<GEO_EDGE e1="22" e2="23" />
+<GEO_EDGE e1="23" e2="24" />
+<GEO_EDGE e1="24" e2="25" />
+<GEO_EDGE e1="25" e2="26" />
+<GEO_EDGE e1="26" e2="27" />
+<GEO_EDGE e1="27" e2="28" />
+<GEO_EDGE e1="28" e2="29" />
+<GEO_EDGE e1="29" e2="30" />
+<GEO_EDGE e1="30" e2="31" />
+<GEO_EDGE e1="31" e2="32" />
+<GEO_EDGE e1="32" e2="33" />
+<GEO_EDGE e1="33" e2="34" />
+<GEO_EDGE e1="34" e2="35" />
+<GEO_EDGE e1="35" e2="36" />
+<GEO_EDGE e1="36" e2="37" />
+<GEO_EDGE e1="37" e2="38" />
+<GEO_EDGE e1="38" e2="39" />
+<GEO_EDGE e1="39" e2="40" />
+<GEO_EDGE e1="40" e2="41" />
+<GEO_EDGE e1="41" e2="42" />
+<GEO_EDGE e1="42" e2="43" />
+<GEO_EDGE e1="43" e2="44" />
+<GEO_EDGE e1="44" e2="45" />
+<GEO_EDGE e1="45" e2="46" />
+<GEO_EDGE e1="46" e2="47" />
+<GEO_EDGE e1="47" e2="48" />
+<GEO_EDGE e1="48" e2="49" />
+<GEO_EDGE e1="49" e2="50" />
+<GEO_EDGE e1="50" e2="51" />
+<GEO_EDGE e1="51" e2="52" />
+<GEO_EDGE e1="52" e2="53" />
+<GEO_EDGE e1="53" e2="54" />
+<GEO_EDGE e1="54" e2="55" />
+<GEO_EDGE e1="55" e2="56" />
+<GEO_EDGE e1="56" e2="57" />
+<GEO_EDGE e1="57" e2="58" />
+<GEO_EDGE e1="58" e2="59" />
+<GEO_EDGE e1="59" e2="60" />
+<GEO_EDGE e1="60" e2="61" />
+<GEO_EDGE e1="61" e2="62" />
+<GEO_EDGE e1="62" e2="63" />
+<GEO_EDGE e1="63" e2="64" />
+<GEO_EDGE e1="64" e2="65" />
+<GEO_EDGE e1="65" e2="66" />
+<GEO_EDGE e1="66" e2="67" />
+<GEO_EDGE e1="67" e2="68" />
+<GEO_EDGE e1="68" e2="69" />
+<GEO_EDGE e1="69" e2="70" />
+<GEO_EDGE e1="70" e2="71" />
+<GEO_EDGE e1="71" e2="72" />
+<GEO_EDGE e1="72" e2="73" />
+<GEO_EDGE e1="73" e2="74" />
+<GEO_EDGE e1="74" e2="75" />
+<GEO_EDGE e1="75" e2="76" />
+<GEO_EDGE e1="76" e2="77" />
+<GEO_EDGE e1="77" e2="78" />
+<GEO_EDGE e1="78" e2="79" />
+<GEO_EDGE e1="79" e2="80" />
+<GEO_EDGE e1="80" e2="81" />
+<GEO_EDGE e1="81" e2="82" />
+<GEO_EDGE e1="82" e2="83" />
+<GEO_EDGE e1="83" e2="84" />
+<GEO_EDGE e1="84" e2="85" />
+<GEO_EDGE e1="85" e2="86" />
+<GEO_EDGE e1="86" e2="87" />
+<GEO_EDGE e1="87" e2="88" />
+<GEO_EDGE e1="88" e2="89" />
+<GEO_EDGE e1="89" e2="90" />
+<GEO_EDGE e1="90" e2="91" />
+<GEO_EDGE e1="91" e2="92" />
+<GEO_EDGE e1="92" e2="93" />
+<GEO_EDGE e1="93" e2="94" />
+<GEO_EDGE e1="94" e2="95" />
+<GEO_EDGE e1="95" e2="96" />
+<GEO_EDGE e1="96" e2="97" />
+<GEO_EDGE e1="97" e2="98" />
+<GEO_EDGE e1="98" e2="99" />
+<GEO_EDGE e1="99" e2="100" />
+<GEO_EDGE e1="100" e2="101" />
+<GEO_EDGE e1="101" e2="102" />
+<GEO_EDGE e1="102" e2="103" />
+<GEO_EDGE e1="103" e2="104" />
+<GEO_EDGE e1="104" e2="105" />
+<GEO_EDGE e1="105" e2="106" />
+<GEO_EDGE e1="106" e2="107" />
+<GEO_EDGE e1="107" e2="108" />
+<GEO_EDGE e1="108" e2="109" />
+<GEO_EDGE e1="109" e2="110" />
+<GEO_EDGE e1="110" e2="111" />
+<GEO_EDGE e1="111" e2="112" />
+<GEO_EDGE e1="112" e2="113" />
+<GEO_EDGE e1="113" e2="114" />
+<GEO_EDGE e1="114" e2="115" />
+<GEO_EDGE e1="115" e2="116" />
+<GEO_EDGE e1="116" e2="117" />
+<GEO_EDGE e1="117" e2="118" />
+<GEO_EDGE e1="118" e2="119" />
+<GEO_EDGE e1="119" e2="120" />
+<GEO_EDGE e1="120" e2="121" />
+<GEO_EDGE e1="121" e2="122" />
+<GEO_EDGE e1="122" e2="123" />
+<GEO_EDGE e1="123" e2="124" />
+<GEO_EDGE e1="124" e2="125" />
+<GEO_EDGE e1="125" e2="126" />
+<GEO_EDGE e1="126" e2="127" />
+<GEO_EDGE e1="127" e2="128" />
+<GEO_EDGE e1="128" e2="129" />
+<GEO_EDGE e1="129" e2="130" />
+<GEO_EDGE e1="130" e2="131" />
+<GEO_EDGE e1="131" e2="132" />
+<GEO_EDGE e1="132" e2="133" />
+<GEO_EDGE e1="133" e2="134" />
+<GEO_EDGE e1="134" e2="135" />
+<GEO_EDGE e1="135" e2="136" />
+<GEO_EDGE e1="136" e2="137" />
+<GEO_EDGE e1="137" e2="138" />
+<GEO_EDGE e1="138" e2="139" />
+<GEO_EDGE e1="139" e2="140" />
+<GEO_EDGE e1="140" e2="141" />
+<GEO_EDGE e1="141" e2="142" />
+<GEO_EDGE e1="142" e2="143" />
+<GEO_EDGE e1="143" e2="144" />
+<GEO_EDGE e1="144" e2="145" />
+<GEO_EDGE e1="145" e2="146" />
+<GEO_EDGE e1="146" e2="147" />
+<GEO_EDGE e1="147" e2="148" />
+<GEO_EDGE e1="148" e2="149" />
+<GEO_EDGE e1="149" e2="150" />
+<GEO_EDGE e1="150" e2="151" />
+<GEO_EDGE e1="151" e2="152" />
+<GEO_EDGE e1="152" e2="153" />
+</GEO_EDGE_LIST>
+</GEO_POLYHEDRON3D>
+</GEOMETRY>
+<COMMON_STYLE alpha="0" r="125" g="125" b="125" layerId="0" strokeId="1" penId="2" colorByLayer="false" strokeByLayer="false" penByLayer="false" byLayerAllowed="false" useConstructionLineMode="false" drawOrder="15" />
+</BASIS_LINE3D>
+</MODEL_SECTION>
+</DOCUMENT>

@@ -1,0 +1,9 @@
+{
+	"folders": [
+		{
+			"uri": "vscode-remote://ssh-remote+dbm-26.local/home/dbm-26"
+		}
+	],
+	"remoteAuthority": "ssh-remote+dbm-26.local",
+	"settings": {}
+}
